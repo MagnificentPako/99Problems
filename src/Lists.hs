@@ -45,4 +45,9 @@ compress (x:xs)
 pack :: (Eq a) => [a] -> [[a]]
 pack [] = []
 pack (x:xs) = let (first,rest) = span (==x) xs
-            in (x:first) : pack rest
+               in (x:first) : pack rest
+
+-- Problem 10
+encode :: (Eq a) => [[a]] -> [(Int,a)]
+encode [] = []
+encode (x:xs) = (length x, head x) : encode xs
