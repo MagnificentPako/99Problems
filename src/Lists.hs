@@ -27,3 +27,9 @@ myReverse (x:xs) = myReverse xs ++ [x]
 -- Problem 6
 isPalindrome :: (Eq a) => [a] -> Bool
 isPalindrome xs = xs == (myReverse xs)
+
+-- Problem 7
+data NestedList a = Elem a | List [NestedList a]
+flatten :: NestedList a -> [a]
+flatten (Elem x) = [x]
+flatten (List x) = concatMap flatten x
