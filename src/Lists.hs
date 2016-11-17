@@ -19,7 +19,11 @@ myLength :: [a] -> Integer
 myLength [_] = 1
 myLength (_:xs) = 1 + myLength xs
 
---Problem 5
+-- Problem 5
 myReverse :: [a] -> [a]
 myReverse [] = []
 myReverse (x:xs) = myReverse xs ++ [x]
+
+-- Problem 6
+isPalindrome :: (Eq a) => [a] -> Bool
+isPalindrome xs = xs == (myReverse xs)
