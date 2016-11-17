@@ -18,3 +18,8 @@ elementAt x i = last $ take i x
 myLength :: [a] -> Integer
 myLength [_] = 1
 myLength (_:xs) = 1 + myLength xs
+
+--Problem 5
+myReverse :: [a] -> [a]
+myReverse [] = []
+myReverse (x:xs) = myReverse xs ++ [x]
