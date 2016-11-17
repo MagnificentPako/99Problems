@@ -33,3 +33,10 @@ data NestedList a = Elem a | List [NestedList a]
 flatten :: NestedList a -> [a]
 flatten (Elem x) = [x]
 flatten (List x) = concatMap flatten x
+
+-- Problem 8
+compress :: (Eq a) => [a] -> [a]
+compress [x] = [x]
+compress (x:xs)
+  | x `elem` xs = compress xs
+  | otherwise   = x: compress xs
