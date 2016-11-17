@@ -9,3 +9,7 @@ myLast (_:xs) = myLast xs
 -- Problem 2
 myButLast :: [a] -> a
 myButLast = last . init
+
+-- Problem 3
+elementAt :: [a] -> Int -> a
+elementAt x i = last $ take i x
