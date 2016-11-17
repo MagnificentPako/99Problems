@@ -40,3 +40,9 @@ compress [x] = [x]
 compress (x:xs)
   | x `elem` xs = compress xs
   | otherwise   = x: compress xs
+
+-- Problem 9
+pack :: (Eq a) => [a] -> [[a]]
+pack [] = []
+pack (x:xs) = let (first,rest) = span (==x) xs
+            in (x:first) : pack rest
