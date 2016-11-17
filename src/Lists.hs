@@ -13,3 +13,8 @@ myButLast = last . init
 -- Problem 3
 elementAt :: [a] -> Int -> a
 elementAt x i = last $ take i x
+
+-- Problem 4
+myLength :: [a] -> Integer
+myLength [_] = 1
+myLength (_:xs) = 1 + myLength xs
