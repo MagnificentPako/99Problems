@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import qualified Lists as LISTS
 
 main :: IO ()
-main = someFunc
+main = putStrLn $ show LISTS.myLast [1,2,3]
